@@ -1,38 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  outline: none;
+  --primary-color: #06573c;
+  --secondary-color: #483d8b;
+}
+
+html {
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  color: beige;
+  text-transform: uppercase;
+  margin: 4rem 0;
+}
+
+.search-form {
+  width: 50%;
+  border: none;
+  padding: 1rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.search-form input {
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 0.1rem solid #ccc;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+}
+
+.search-form input[type='text'] {
+  padding: 0 0.5rem;
+  font-style: italic;
+  width: 70%;
+  color: black;
+  text-align: center;
+}
+
+.search-button {
+  background-color: var(--primary-color);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
   color: white;
+  letter-spacing: 2px;
+  width: 30%;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* ----------------------------------------------MEDIA QUERIES------------------------------------------------------- */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+  .search-form input {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .search-form input {
+    font-size: 1rem;
+  }
+  .search-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .search-form input {
+    font-size: 0.9rem;
+  }
+  .search-button {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+
+  .search-form {
+    width: 80%;
+  }
+  .search-form input {
+    font-size: 0.8rem;
+  }
+  .search-button {
+    font-size: 0.9rem;
   }
 }

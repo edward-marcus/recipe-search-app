@@ -1,0 +1,53 @@
+.ingredient-list {
+  margin-top: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--secondary-color);
+}
+
+.ingredient-list li {
+  margin: 0.5rem 0;
+}
+
+.ingredient-text {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.ingredient-weight {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.ingredients-div {
+  animation: show 1s linear forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* -----------------------------------------------------------------MEDIA QUERIES-------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+  .ingredient-text,
+  .ingredient-weight {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ingredient-text,
+  .ingredient-weight {
+    font-size: 0.8rem;
+  }
+}
